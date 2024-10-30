@@ -1,0 +1,116 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e0ffff;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    background-color: #f0ffff;
+    border: 2px solid #333;
+    width: 800px;
+    height: 500px;
+}
+
+.logo-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('background-pattern.png') center/cover;
+}
+
+.logo-section h1 {
+    font-size: 48px;
+    color: #d2b48c;
+    text-align: center;
+    font-weight: bold;
+}
+
+.login-section {
+    flex: 1;
+    padding: 30px;
+    background-color: #e0ffff;
+    text-align: center;
+}
+
+.login-section h2 {
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.login-section h1 {
+    font-size: 32px;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.button, .login-section input[type="email"], .login-section input[type="password"], .login-btn {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    margin: 10px auto;
+    border: none;
+    font-size: 16px;
+    background-color: #d3d3d3;
+}
+
+.button:hover, .login-btn:hover {
+    background-color: #c0c0c0;
+}
+
+.divider {
+    margin: 20px auto;
+    width: 80%;
+    border-bottom: 1px dashed #333;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider::before, .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px dashed #333;
+    margin: 0 10px;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.remember-forgot label {
+    display: flex;
+    align-items: center;
+}
+
+.login-btn {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.logo-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('background-pattern.png') center/cover;
+}
+
+.logo-image {
+    max-width: 80%; /* Adjust to control the logo size */
+    height: auto;
+}

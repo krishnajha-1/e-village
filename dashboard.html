@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bright Nest Dashboard</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+
+<div class="dashboard-container max-w-5xl mx-auto p-8 bg-white rounded-xl shadow-lg mt-10 border border-gray-200">
+    
+    <!-- Header Section -->
+    <header class="flex items-center justify-between mb-8">
+        <img src="logo.png" alt="Bright Nest Logo" class="h-16">
+        <div class="language-option text-gray-500 text-sm cursor-pointer hover:text-gray-700 transition duration-200">Language</div>
+    </header>
+
+    <!-- Search Section -->
+    <div class="search-section mb-10">
+        <input type="text" placeholder="Search village..." 
+               class="w-full p-4 text-gray-700 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 shadow-sm placeholder-gray-400"
+               onclick="redirectToVillageInfo()">
+    </div>
+
+    <!-- Suggestions Title -->
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">Suggestions</h2>
+
+    <!-- Suggestion Grid -->
+    <div class="suggestion-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="suggestion-box bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-200 ease-in-out cursor-pointer">
+            <h3 class="text-xl font-semibold text-gray-800">Suggestion 1</h3>
+            <p class="text-gray-600 mt-2">Brief description or insight goes here.</p>
+        </div>
+        <div class="suggestion-box bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-200 ease-in-out cursor-pointer">
+            <h3 class="text-xl font-semibold text-gray-800">Suggestion 2</h3>
+            <p class="text-gray-600 mt-2">Brief description or insight goes here.</p>
+        </div>
+        <div class="suggestion-box bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-200 ease-in-out cursor-pointer">
+            <h3 class="text-xl font-semibold text-gray-800">Suggestion 3</h3>
+            <p class="text-gray-600 mt-2">Brief description or insight goes here.</p>
+        </div>
+        <div class="suggestion-box bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-200 ease-in-out cursor-pointer">
+            <h3 class="text-xl font-semibold text-gray-800">Suggestion 4</h3>
+            <p class="text-gray-600 mt-2">Brief description or insight goes here.</p>
+        </div>
+        <div class="suggestion-box bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-200 ease-in-out cursor-pointer">
+            <h3 class="text-xl font-semibold text-gray-800">Suggestion 5</h3>
+            <p class="text-gray-600 mt-2">Brief description or insight goes here.</p>
+        </div>
+        <div class="suggestion-box bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-200 ease-in-out cursor-pointer">
+            <h3 class="text-xl font-semibold text-gray-800">Suggestion 6</h3>
+            <p class="text-gray-600 mt-2">Brief description or insight goes here.</p>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript for redirection -->
+<script>
+    function redirectToVillageInfo() {
+        window.location.href = 'home.html'; // Replace with the actual file path if needed
+    }
+</script>
+
+</body>
+</html>

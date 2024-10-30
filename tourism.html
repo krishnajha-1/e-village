@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-b from-gray-50 to-white flex items-center justify-center min-h-screen font-sans antialiased">
+
+    <!-- Main Container -->
+    <div class="container bg-white rounded-3xl shadow-2xl p-8 max-w-5xl w-full space-y-8 transform hover:scale-105 transition duration-300">
+        
+        <!-- Header Section -->
+        <div class="header text-center text-4xl font-extrabold text-blue-700 border-b-4 border-blue-100 pb-4 uppercase tracking-wide">Tourism</div>
+        
+        <!-- Tourism Items -->
+        <div class="column grid grid-cols-1 sm:grid-cols-2 gap-8 mt-6">
+            <!-- Item 1: Dam -->
+            <div class="item text-center transform hover:scale-105 transition duration-300">
+                <span class="sub-label text-lg font-medium text-gray-700 block mb-3">Dam</span>
+                <div class="box h-48 bg-gradient-to-br from-blue-200 to-blue-300 rounded-lg shadow-lg flex items-center justify-center text-gray-800 font-semibold">
+                    Dam Image/Content
+                </div>
+            </div>
+            
+            <!-- Item 2: Waterfall -->
+            <div class="item text-center transform hover:scale-105 transition duration-300">
+                <span class="sub-label text-lg font-medium text-gray-700 block mb-3">Waterfall</span>
+                <div class="box h-48 bg-gradient-to-br from-blue-200 to-blue-300 rounded-lg shadow-lg flex items-center justify-center text-gray-800 font-semibold">
+                    Waterfall Image/Content
+                </div>
+            </div>
+        </div>
+        
+        <!-- Additional Tourism Aspects -->
+        <div class="space-y-8 mt-8">
+            
+            <!-- Natural Beauty Section -->
+            <div class="row">
+                <div class="label text-3xl font-semibold text-blue-600 mb-4">Natural Beauty</div>
+                <p class="text-gray-600 leading-relaxed">
+                    Kalap is surrounded by stunning landscapes, making it ideal for eco-tourism. Trekking routes and nature trails can attract adventure seekers.
+                </p>
+            </div>
+
+            <!-- Cultural Tourism Section -->
+            <div class="row">
+                <div class="label text-3xl font-semibold text-blue-600 mb-4">Cultural Tourism</div>
+                <p class="text-gray-600 leading-relaxed">
+                    Opportunities for visitors to engage with local customs, participate in festivals, and learn about traditional crafts could enhance tourism.
+                </p>
+            </div>
+
+            <!-- Homestays Section -->
+            <div class="row">
+                <div class="label text-3xl font-semibold text-blue-600 mb-4">Homestays</div>
+                <p class="text-gray-600 leading-relaxed">
+                    Promoting homestays can provide tourists with an authentic experience while benefiting the local economy.
+                </p>
+            </div>
+            
+        </div>
+
+    </div>
+
+</body>
+</html>

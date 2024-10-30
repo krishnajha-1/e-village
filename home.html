@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Village Info</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script>
+        // Function to change language
+        function changeLanguage(lang) {
+            const translations = {
+                en: {
+                    title: "KALAP",
+                    subtitle: "Discover information about this village and its people",
+                    aboutHeader: "About",
+                    aboutText: [
+                        "Kalap is a village lying forgotten in time in the upper Garhwal region of the northern state of Uttarakhand in India. ",
+                        "Situated at an altitude of 7,800 ft, the village is nestled among virgin pine and deodar forests, and overlooks the gorge cut open by the roaring River Supin.",
+                        "Kalap is home to traditional Garhwali architecture and its surroundings offer stunning natural beauty, including views of the snow-capped Bandarpunch range.",
+                
+                    ],
+                    importantPeople: "Important People",
+                    sarpanch: "Sarpanch",
+                    daroga: "Daroga",
+                    mukhiya: "Mukhiya",
+                    culture: "Culture",
+                    tourism: "Tourism",
+                    modernSystem: "Modern System",
+                    skillDevelopment: "Skill Development",
+                    issues: "Issues",
+                    language: "Language",
+                },
+                hi: {
+                    title: "गाँव का नाम",
+                    subtitle: "इस गाँव और इसके लोगों के बारे में जानकारी खोजें",
+                    aboutHeader: "के बारे में",
+                    aboutText: [
+                        "लोरम इप्सम डोलर सिट अमेट, कोंसेटेटर एडिपिसिंग एलीट। सस्पेंडिससे वेरियस एनिम इन एरोस एलिमेंटम ट्रिस्टिक।",
+                        "डुइस कर्सस, मी क्यूइस विवेर्रा ओर्नारे, एरोस डोलर इंटरडम नुल्ला, उत्त कमोडो डियाम लिबेरो वेटे एरत।",
+                        "एनेन फॉउडिस निबह एट ज्यूस्टो कर्सस आईडी रुट्रम लोरम इम्परडियेंट। नंक उत्तर सेम वेटे रिसस ट्रिस्टिक पोसुरे।",
+                        
+                    ],
+                    importantPeople: "महत्वपूर्ण लोग",
+                    sarpanch: "सरपंच",
+                    daroga: "दारोगा",
+                    mukhiya: "मुखिया",
+                    culture: "संस्कृति",
+                    tourism: "पर्यटन",
+                    modernSystem: "आधुनिक प्रणाली",
+                    skillDevelopment: "कौशल विकास",
+                    issues: "समस्याएँ",
+                    language: "भाषा",
+                },
+                kn: {
+                    title: "ಗ್ರಾಮದ ಹೆಸರು",
+                    subtitle: "ಈ ಗ್ರಾಮ ಮತ್ತು ಇದರ ಜನರ ಬಗ್ಗೆ ಮಾಹಿತಿ ಪತ್ತೆಹಚ್ಚಿ",
+                    aboutHeader: "ಯುವರ ಬಗ್ಗೆ",
+                    aboutText: [
+                        "ಲೊರಮ್ ಇಪ್ಸಮ್ ಡೋಲರ್ ಸಿಟ್ ಅಮೆಟ್, ಕೊನೆಟೇಟರ್ ಎಡಿಪಿಸಿಂಗ್ ಎಲಿಟ್. ಸಸ್ಪೆಂಡಿಸ್ ವರ್ಸಸ್ ಎನಿಮ್ ಇನ್ ಏರೋಸ್ ಎಲೆಮೆಂಟ್ ಟ್ರಿಸ್ಟಿಕ್.",
+                        "ಡ್ಯೂಸ್ ಕರ್ಸಸ್, ಮೀ ಕ್ವಿಸ್ ವೀವೆರಾ ಓರ್‌ನಾರೆ, ಎರೋಸ್ ಡೊಲರ್ ಇಂಟರ್‌ಡಮ್ ನುಲ್ಲಾ, ಉತ್ ಕಮೋಡೋ ಡಿಯಾಮ್ ಲಿಬೆರೋ ವಿಟೇ ಎರಟ್.",
+                        "ಆನೆಯನ್ ಫೌಂಡಿಸ್ ನಿಬಹ್ ಎಟ್ ಜುಸ್ಟೋ ಕರ್ಸಸ್ ಐಡಿ ರೂಟ್ರಮ್ ಲೊರಮ್ ಇಂಪೆರ್ಡಿಯಂಟ್. ನಂಕ ಉತ್ತರ ಸೆಮ್ ವಿಟೇ ರಿಸಸ್ ಟ್ರಿಸ್ಟಿಕ್ ಪೋಸುರ.",
+                        
+                    ],
+                    importantPeople: "ಮಹತ್ವಪೂರ್ಣ ವ್ಯಕ್ತಿಗಳು",
+                    sarpanch: "ಸರ್ಪಂಚ",
+                    daroga: "ದಾರೋಗೆ",
+                    mukhiya: "ಮುಖ್ಯೆ",
+                    culture: "ಸಂಸ್ಕೃತಿ",
+                    tourism: "ಪರ್ಯಟನೆ",
+                    modernSystem: "ಆಧುನಿಕ ವ್ಯವಸ್ಥೆ",
+                    skillDevelopment: "ಕೌಶಲ್ಯ ಅಭಿವೃದ್ಧಿ",
+                    issues: "ಸಮಸ್ಯೆಗಳು",
+                    language: "ಭಾಷೆ",
+                },
+            };
+
+            // Change text content based on selected language
+            const { title, subtitle, aboutHeader, aboutText, importantPeople, sarpanch, daroga, mukhiya, culture, tourism, modernSystem, skillDevelopment, issues, language } = translations[lang];
+
+            document.getElementById('village-title').innerText = title;
+            document.getElementById('village-subtitle').innerText = subtitle;
+            document.getElementById('about-header').innerText = aboutHeader;
+            document.getElementById('about-text-1').innerText = aboutText[0];
+            document.getElementById('about-text-2').innerText = aboutText[1];
+            document.getElementById('about-text-3').innerText = aboutText[2];
+            document.getElementById('about-text-4').innerText = aboutText[3];
+            document.getElementById('important-people').innerText = importantPeople;
+            document.getElementById('sarpanch').innerText = sarpanch;
+            document.getElementById('daroga').innerText = daroga;
+            document.getElementById('mukhiya').innerText = mukhiya;
+            document.getElementById('culture-link').innerText = culture;
+            document.getElementById('tourism-link').innerText = tourism;
+            document.getElementById('modern-system-link').innerText = modernSystem;
+            document.getElementById('skill-development-link').innerText = skillDevelopment;
+            document.getElementById('issues-link').innerText = issues;
+            document.getElementById('language-label').innerText = language;
+        }
+    </script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+
+    <!-- Main Container -->
+    <div class="container mx-auto p-8 bg-white rounded-xl shadow-xl mt-10 max-w-4xl border border-gray-200">
+        
+        <!-- Search Bar -->
+        <div class="flex items-center justify-between mb-8">
+            <div class="relative w-full">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="text" placeholder="Search for village..." 
+                       class="w-full p-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700 placeholder-gray-400 shadow-sm">
+            </div>
+            <span class="text-gray-500 cursor-pointer hover:text-gray-700 transition font-semibold ml-4" id="language-label">Language</span>
+            <select class="ml-2 border border-gray-300 rounded-lg p-2" onchange="changeLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="hi">हिंदी</option>
+                <option value="kn">ಕನ್ನಡ</option>
+            </select>
+        </div>
+
+        <!-- Content Section -->
+        <div class="content mb-10">
+            <div class="village-name text-center mb-6">
+                <h1 class="text-4xl font-extrabold text-gray-900" id="village-title">Village Name</h1>
+                <p class="text-gray-500 mt-2" id="village-subtitle">Discover information about this village and its people</p>
+            </div>
+            
+            <!-- About Section -->
+            <div class="about-section mb-8">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4" id="about-header">About</h2>
+                <p class="text-gray-600 leading-relaxed mb-2" id="about-text-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                <p class="text-gray-600 leading-relaxed mb-2" id="about-text-2">Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                <p class="text-gray-600 leading-relaxed mb-2" id="about-text-3">Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                <p class="text-gray-600 leading-relaxed" id="about-text-4">Aliquam erat volutpat. Curabitur accumsan augue est.</p>
+            </div>
+        </div>
+        <!-- Image -->
+        <div class="w-full lg:w-1/3 flex items-center justify-center lg:justify-start mt-4 lg:mt-0">
+            <img src="village.jpg" alt="Village Image" class="rounded-lg shadow-md w-full max-w-xs">
+        </div>
+        
+        <!-- Sidebar - Important People -->
+        <div class="sidebar bg-gray-50 p-6 rounded-lg shadow-inner mb-10">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4" id="important-people">Important People</h3>
+            
+            <a href="sarpanch.html" class="person-link flex items-center mb-3 p-3 rounded-lg hover:bg-blue-100 transition">
+                <img src="profile.png" alt="Sarpanch" class="h-10 w-10 rounded-full mr-3 object-cover">
+                <p class="text-gray-800 font-medium" id="sarpanch">Sarpanch</p>
+            </a>
+            
+            <a href="daroga.html" class="person-link flex items-center mb-3 p-3 rounded-lg hover:bg-blue-100 transition">
+                <img src="profile.png" alt="Daroga" class="h-10 w-10 rounded-full mr-3 object-cover">
+                <p class="text-gray-800 font-medium" id="daroga">Daroga</p>
+            </a>
+            
+            <a href="mukhiya.html" class="person-link flex items-center p-3 rounded-lg hover:bg-blue-100 transition">
+                <img src="profile.png" alt="Mukhiya" class="h-10 w-10 rounded-full mr-3 object-cover">
+                <p class="text-gray-800 font-medium" id="mukhiya">Mukhiya</p>
+            </a>
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="navbar flex justify-around bg-blue-600 text-white p-4 rounded-lg shadow-md text-sm font-medium">
+            <a href="culture.html" class="hover:text-yellow-300 transition" id="culture-link">Culture</a>
+            <a href="tourism.html" class="hover:text-yellow-300 transition" id="tourism-link">Tourism</a>
+            <a href="modernsys.html" class="hover:text-yellow-300 transition" id="modern-system-link">Modern System</a>
+            <a href="skldev.html" class="hover:text-yellow-300 transition" id="skill-development-link">Skill Development</a>
+            <a href="issues.html" class="hover:text-yellow-300 transition" id="issues-link">Issues</a>
+        </div>
+    </div>
+
+</body>
+</html>
